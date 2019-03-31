@@ -10,3 +10,5 @@ RUN apk update \
     bash-completion \
     && rm -rf /var/cache/apk/* \
     && /bin/bash
+
+RUN echo 'alias ll="ls -alh"' >> /root/.bashrc
