@@ -1,0 +1,10 @@
+version: '3'
+services:
+  ss:
+    build: .
+    container_name: shadowsocks
+    restart: always
+    volumes:
+      - ./config.json:/app/config.json
+    ports:
+      - "18388:8388"  # 外部端口:内部端口
