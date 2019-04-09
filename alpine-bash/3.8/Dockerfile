@@ -12,3 +12,7 @@ RUN apk update \
     && /bin/bash
 
 RUN echo 'alias ll="ls -alh"' >> /root/.bashrc
+
+RUN apk add -U tzdata \
+    && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && apk del tzdata
