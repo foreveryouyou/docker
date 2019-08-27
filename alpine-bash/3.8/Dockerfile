@@ -1,7 +1,7 @@
-FROM alpine:3.8
+FROM alpine:3.10
 
 # 更新Alpine的软件源为国内（清华大学）的站点
-RUN echo "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.4/main/" > /etc/apk/repositories \
+RUN echo "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.10/main/" > /etc/apk/repositories \
     && apk update \
     && apk upgrade \
     && apk add --no-cache bash \
